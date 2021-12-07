@@ -46,4 +46,23 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
 
     }
+
+    public void JoinGameRoom()
+    {
+        var options = new RoomOptions
+        {
+            MaxPlayers = 6
+        };
+        PhotonNetwork.JoinOrCreateRoom("Kingdom", options, null);
+    }
+
+    public override void OnJoinedRoom()
+    {
+        Debug.Log("Joined room!!");
+    }
+
+    public override void OnJoinRoomFailed(short returnCode,string message)
+    {
+        Debug.LogWarningFormat("Joined room failed!! {0}", message);
+    }
 }
