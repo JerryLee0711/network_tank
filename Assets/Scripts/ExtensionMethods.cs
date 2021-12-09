@@ -12,7 +12,9 @@ public static class ExtensionMethods
             {
                 var child = trans.GetChild(n).FindAnyChild<Transform>(name);
                 if (child != null)
+                {
                     return child.GetComponent<T>();
+                }
             }
             if (trans.GetChild(n).name == name)
             {
