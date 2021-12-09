@@ -282,7 +282,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1165218543}
-  - component: {fileID: 1165218544}
   m_Layer: 0
   m_Name: Spawnpoints
   m_TagString: Untagged
@@ -308,18 +307,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1165218544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165218542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcc053d2527130f46a0f8a01160fb7ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1800963445
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1800963446}
+  - component: {fileID: 1800963447}
   m_Layer: 0
   m_Name: Spawnpoint4
   m_TagString: Untagged
@@ -350,6 +338,18 @@ Transform:
   m_Father: {fileID: 1165218543}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1800963447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800963445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc053d2527130f46a0f8a01160fb7ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1830574865
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1830574866}
+  - component: {fileID: 1830574867}
   m_Layer: 0
   m_Name: Spawnpoint1
   m_TagString: Untagged
@@ -380,6 +381,18 @@ Transform:
   m_Father: {fileID: 1165218543}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1830574867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830574865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc053d2527130f46a0f8a01160fb7ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1833097505
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +469,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833097505}
-  m_LocalRotation: {x: 0.27147081, y: -0.13657705, z: 0.038949873, w: 0.9519104}
-  m_LocalPosition: {x: 5.755516, y: 5.285858, z: -16.330917}
+  m_LocalRotation: {x: 0.40392998, y: -0.0027481916, z: 0.0012127106, w: 0.914785}
+  m_LocalPosition: {x: 0.14204119, y: 25.9298, z: -23.636587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -472,6 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1872692147}
+  - component: {fileID: 1872692148}
   m_Layer: 0
   m_Name: Spawnpoint2
   m_TagString: Untagged
@@ -493,6 +507,18 @@ Transform:
   m_Father: {fileID: 1165218543}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1872692148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872692146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc053d2527130f46a0f8a01160fb7ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1933415012
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933415013}
+  - component: {fileID: 1933415014}
   m_Layer: 0
   m_Name: Spawnpoint3
   m_TagString: Untagged
@@ -523,3 +550,15 @@ Transform:
   m_Father: {fileID: 1165218543}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933415014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933415012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc053d2527130f46a0f8a01160fb7ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

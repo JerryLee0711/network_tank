@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviourPunCallbacks
     public static GameManager instance;
     public static GameObject localPlayer;
     private GameObject defaultSpawnPoint;
+    private Player[] players;
+    private GameObject[] TankPlayers;
 
     string gameVersion = "1";
     void Awake()
@@ -54,7 +56,16 @@ public class GameManager : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-
+        players = PhotonNetwork.PlayerList;
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            TankPlayers = GameObject.FindGameObjectsWithTag("Player");
+            if(TankPlayers.Length != players.Length)
+            {
+                var spawnpoint = GetRandomSpawnPoint();
+                localPlayer = PhotonNetwork.Instantiate("TankPlayer", spawnpoint.position, spawnpoint.rotation, 0);
+            }
+        }
     }
 
     public void JoinGameRoom()
