@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using Tank;
+using UnityEngine.UI;
 
 namespace Complete
 {
@@ -20,9 +22,19 @@ namespace Complete
         private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
         private ParticleSystem[] m_particleSystems; // References to all the particles systems used by the Tanks
 
+        //my add
+        private string m_TurretAxisName;
+        private float m_TurretInputValue;
+        private Transform tankTurret;
+        private Transform fireTransform;
+        public Slider m_AimSlider;
+
         private void Awake ()
         {
             m_Rigidbody = GetComponent<Rigidbody> ();
+
+            tankTurret = transform.FindAnyChild<Transform>("TankTurret");
+            fireTransform = transform.FindAnyChild<Transform>("FireTransform");
         }
 
 
@@ -65,6 +77,8 @@ namespace Complete
             m_MovementAxisName = "Vertical";
             m_TurnAxisName = "Horizontal";
 
+            m_TurretAxisName = "topHorizontal";
+
             // Store the original pitch of the audio source.
             m_OriginalPitch = m_MovementAudio.pitch;
         }
@@ -75,6 +89,8 @@ namespace Complete
             // Store the value of both input axes.
             m_MovementInputValue = Input.GetAxis (m_MovementAxisName);
             m_TurnInputValue = Input.GetAxis (m_TurnAxisName);
+
+            m_TurretInputValue = Input.GetAxis(m_TurretAxisName);
 
             EngineAudio ();
         }
@@ -113,6 +129,7 @@ namespace Complete
             // Adjust the rigidbodies position and orientation in FixedUpdate.
             Move ();
             Turn ();
+            TurretTurn();
         }
 
 
@@ -136,6 +153,20 @@ namespace Complete
 
             // Apply this rotation to the rigidbody's rotation.
             m_Rigidbody.MoveRotation (m_Rigidbody.rotation * turnRotation);
+        }
+
+        private void TurretTurn()
+        {
+            float turn = m_TurretInputValue * m_TurnSpeed * Time.deltaTime;
+            //Quaternion turnRotation = Quaternion.Euler(0.0f, turn, 0.0f);
+            //Quaternion turretRot = tankTurret.rotation;
+            //turretRot.y = turn;
+            //tankTurret.rotation = turretRot;
+
+            m_AimSlider.transform.RotateAround(tankTurret.position, Vector3.up, turn);
+            tankTurret.RotateAround(tankTurret.position, Vector3.up, turn);
+            fireTransform.RotateAround(tankTurret.position, Vector3.up, turn);
+
         }
     }
 }
